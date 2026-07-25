@@ -11,5 +11,10 @@ jobs:
   run:
     uses: catppuccin/actions/.github/workflows/whiskers-check.yml@v1
     with:
-      args: wofi.tera
+      args: templates/non_color_overrides.tera
+    secrets: inherit
+  run_other:
+    uses: catppuccin/actions/.github/workflows/whiskers-check.yml@v1
+    with:
+      args: templates/wofi.tera
     secrets: inherit
